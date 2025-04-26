@@ -1,5 +1,5 @@
 # EX01 Developing a Simple Webserver
-## Date:
+## Date:29.03.2025
 
 ## AIM:
 To develop a simple webserver to serve html pages and display the list of protocols in TCP/IP Protocol Suite.
@@ -37,34 +37,28 @@ Open a browser and navigate to http://127.0.0.1:8000 (or the assigned port).
 
 ## PROGRAM:
 ```
-from http.server import HTTPServer, BaseHTTPRequestHandler
-content = """
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>My webserver</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
 <body>
-<h1>Welcome<h1>
+    <h1>Fundamental of Web Application</h1>
+    <h2>Fundamental of Web Application</h2>
+    <h3>Fundamental of Web Application</h3>
+    <h4>Fundamental of Web Application</h4>
+    <h5>Fundamental of Web Application</h5>
+    <h6>Fundamental of Web Application</h6>
 </body>
 </html>
-"""
-class myhandler(BaseHTTPRequestHandler):
-    def do_GET(self):
-        print("request received")
-        self.send_response(200)
-        self.send_header('content-type', 'text/html; charset=utf-8')
-        self.end_headers()
-        self.wfile.write(content.encode())
-server_address = ('',8000)
-httpd = HTTPServer(server_address,myhandler)
-print("my webserver is running...")
-httpd.serve_forever()
 ```
 
 
 ## OUTPUT:
-![Screenshot 2025-04-19 101809](https://github.com/user-attachments/assets/b5bde3e6-fde8-4898-baee-a5749f0857bc)
+![Screenshot 2025-04-26 101749](https://github.com/user-attachments/assets/2cb0f8a6-6d0f-4a65-a4e5-87bb74e9892d)
+
 
 
 ## RESULT:
